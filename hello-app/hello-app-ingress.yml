@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-app-ingress
+  namespace: hello-app
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt"
+spec:
+  ingressClassNName: nginx
+  tls:
+    - hosts:
+      - hello.hyunbindev.site
+    secretName: dddm-ingress-tls
+  rules:
+    - host: hello.hyunbindev.site
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: hello-app-front
+                port:
+                  number: 80
