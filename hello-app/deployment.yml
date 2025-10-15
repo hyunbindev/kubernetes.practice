@@ -16,5 +16,6 @@ spec:
       containers:
         - name: hello-app-front-container
           image: hello-app-front:latest
+          imagePullPolicy: Never
           ports:
             - containerPort: 80
