@@ -6,11 +6,11 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt"
 spec:
-  ingressClassNName: nginx
+  ingressClassName: nginx
   tls:
     - hosts:
-      - hello.hyunbindev.site
-    secretName: dddm-ingress-tls
+        - hello.hyunbindev.site
+      secretName: ddm-ingress-tls
   rules:
     - host: hello.hyunbindev.site
       http:
