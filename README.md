@@ -12,6 +12,7 @@
   - Ingress에 TLS 설정 (`secretName: ddm-ingress-tls`)
   - HTTPS 자동 갱신 적용
 ### 주요 명령어
+```bash
 sudo k3s ctr images import hello-app-front.tar
 kubectl apply -f deployment.yml -n hello-app
 kubectl apply -f service.yml -n hello-app
