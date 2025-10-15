@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './app.module.css'
+import './app.css'
 function App() {
   const [rotate, setRotate] = useState<number>(0);
   const addRotateDgree = ()=>{
