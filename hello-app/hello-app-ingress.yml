@@ -22,3 +22,24 @@ spec:
                 name: hello-app-front
                 port:
                   number: 80
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: hello-gateway-service
+                port:
+                  number: 8081
+          - path: /oauth2
+            pathType: Prefix
+            backend:
+              service:
+                name: hello-gateway-service
+                port:
+                  number: 8081
+          - path: /login/oauth2/code/github
+            pathType: Prefix
+            backend:
+              service:
+                name: hello-gateway-service
+                port:
+                  number: 8081
