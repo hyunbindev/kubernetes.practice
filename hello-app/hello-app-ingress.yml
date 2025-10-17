@@ -19,7 +19,14 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: hello-app-front
+                name: hello-front
+                port:
+                  number: 80
+          - path: /oauth2/callback
+            pathType: Prefix
+            backend:
+              service:
+                name: hello-front
                 port:
                   number: 80
           - path: /api
